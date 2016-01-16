@@ -1,0 +1,36 @@
+
+
+
+// Colors
+$first: #01c6f8;
+$second: #ffb127;
+$third: rgba(255,255,255,.2);
+
+
+// Bootstrap variables
+
+//** Background color for `<body>`.
+$body-bg: #000 !default;
+//** Global text color on `<body>`.
+$text-color: #fff !default;
+
+$border-radius-base:        0px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
+
+//** Global textual link color.
+$link-color: $second !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $third !default;
+
+
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Exo", sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          16px !default;

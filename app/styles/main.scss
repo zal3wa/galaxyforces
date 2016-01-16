@@ -1,0 +1,169 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "variables";
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "inputs";
+@import "stars-bg";
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+*{
+  cursor: url("../images/pointer.png"),default;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+// Login page
+.login{
+  overflow-x: hidden;
+  .logo{
+    background: url(../images/logo.png) no-repeat 50% 50%;
+    width: 429px;
+    height: 212px;
+    margin: 0 auto;
+    z-index: 5;
+    position: relative;
+  }
+  .perspective{
+    transform: perspective(500px) rotateX(-315deg) translateY(-310px) translateZ(70px) translateX(-10px);
+    // perspective(750px) rotateX(-315deg) translateY(-360px) translateZ(60px) translateX(-10px)
+    width: 700px;
+    .galaxy{
+      background: url(../images/galaxy.png) no-repeat 50% 50%;
+      width: 491px;
+      height: 491px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 3;
+    }
+    .galaxy-layer{
+      background: url(../images/galaxy-layer.png) no-repeat 50% 50%;
+      width: 491px;
+      height: 491px;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      z-index: 3;
+    }
+    .galaxy-animation{
+      animation: galaxy-rotation 100s linear infinite;
+    }
+    .galaxy-animation-layer{
+      animation: galaxy-rotation 200s linear infinite;
+    }
+  }
+  @keyframes galaxy-rotation {
+    from {transform: rotateZ( 0deg )}
+    to {transform: rotateZ( 360deg )}
+  }
+  .bg{
+    background: url(../images/bg.jpg) no-repeat #000 50% 0%;
+    width: 1672px;
+    height: 757px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -836px;
+    z-index: 4;
+    opacity: .8;
+  }
+  .container{
+    // to display stars-bg properly
+    z-index: 10;
+    position: relative;
+  }
+  .create-account{
+    padding: 50px 0;
+  }
+  .form-control{
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding: 6px 20px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
